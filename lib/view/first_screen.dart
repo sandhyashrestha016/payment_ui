@@ -44,7 +44,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Image.asset("images/add.png",
-                            height: 18, color: Colors.blue),
+                            height: 18, color: Colors.deepPurpleAccent),
                         const Text("Add New",
                             style: TextStyle(
                                 fontSize: 18,
