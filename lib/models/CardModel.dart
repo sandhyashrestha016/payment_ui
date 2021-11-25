@@ -1,10 +1,12 @@
+// ignore: duplicate_ignore
+// ignore: file_names
 // ignore: file_names
 // ignore: file_names
 // ignore: file_names
 // ignore: file_names
 // ignore: file_names
 
-// ignore_for_file: avoid_print, prefer_const_constructors
+// ignore_for_file: avoid_print, prefer_const_constructors, file_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
 

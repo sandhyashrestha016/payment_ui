@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:work/models/CardModel.dart';
 import 'package:work/models/text_widget.dart';
+import 'package:work/view/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -31,29 +32,32 @@ class _FirstScreenState extends State<FirstScreen> {
                   style: TextStyle(fontSize: 33, fontWeight: FontWeight.w600)),
               const SizedBox(height: 80),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text("Saved Cards",
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: Colors.grey)),
-                  const SizedBox(width: 180),
                   InkWell(
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Image.asset("images/add.png",
                             height: 18, color: Colors.blue),
-                        const SizedBox(width: 10),
                         const Text("Add New",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.blue)),
+                                color: Colors.deepPurpleAccent)),
                       ],
                     ),
                     onTap: () {
-                      // ignore: avoid_print
-                      print("add new");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SecondScreen(),
+                          ));
                     },
                   ),
                 ],
@@ -61,22 +65,6 @@ class _FirstScreenState extends State<FirstScreen> {
               const SizedBox(
                 height: 20,
               ),
-              // Container(
-              //   height: 200,
-              //   child: ListView.builder(
-              //       scrollDirection: Axis.horizontal,
-              //       itemCount: cards.length,
-              //       itemBuilder: (context, index) {
-              //         return Container(
-              //           height: 200,
-              //           width: 300,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(20),
-              //             color: Color(cards[index].cardBackground),
-              //           ),
-              //         );
-              //       }),
-              // ),
               const CardModel(),
               const SizedBox(height: 50),
               Center(
@@ -86,7 +74,7 @@ class _FirstScreenState extends State<FirstScreen> {
                       // ignore: avoid_print
                       print("pay now");
                     },
-                    color: Colors.blue,
+                    color: Colors.deepPurpleAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                     child: const CustomText(
